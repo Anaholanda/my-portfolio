@@ -4,7 +4,7 @@ import DownloadingIcon from '@mui/icons-material/Downloading';
 import EmailIcon from '@mui/icons-material/Email';
 import StyledButton from "../../../../components/StyledButton/StyledButton";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground";
-
+import { Padding } from "@mui/icons-material";
 
 
 const Hero = ()=>{
@@ -14,10 +14,18 @@ const Hero = ()=>{
         height: "100vh",
         display: "flex",
         alignItems: "center",
+        [theme.breakpoints.up('xs')]:{
+          PaddingTop: "100px"
+
+        },
+        [theme.breakpoints.up('md')]:{
+          PaddingTop: "0",
+          
+        }
     }))
 
     const StyledImg = styled("img")(({theme})  => ({
-      width:"80%",
+      width:"75%",
       borderRadius:"50%",
       border: '1px solid ${theme.pallete.primary.contrastext}',
       }))
